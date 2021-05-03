@@ -11,22 +11,30 @@ Simply document your inputs and outputs, and NoteFlow executes your Jupyter Note
 - [Reporting Bugs & Issues](#reporting-bugs-issues)
 
 ## How Does It Work?
-
-A notebook’s first code cell is used to document inputs and outputs. You can specify an input/output's type, as well as a friendly description.
-
+A notebook’s first code cell is used to document inputs and outputs. You can specify an input/output's type, as well as a friendly description.  
+  
+- The first code cell is special and documents the noteflow inputs and outputs via formatted comments.
+- However, it is arbitrary code and can be used in anyway you like for local development and testing. It is overwritten in production with values provided from the user.
+  
+  
+The I/O comment spec has three parts:
+- input/ouput: marks variable as an input or output
+- type: I/O is typed (for the underlying API). Types are: `string, number, boolean, filepath, and dirpath`
+- description: The rest of the comment becomes the prompt/description for the field in the generated App.
+  
 For example:
 
 
 ```
-string_var = 'foo'				  #input  string    A string input    
-num_var = None					  #input  number    A numeric input       
-report_file = '/report.csv'		  #output filepath  The name of a file to export    
+string_var = 'foo'                 #input  string    A string input    
+num_var = None                     #input  number    A numeric input       
+report_file = '/report.csv'        #output filepath  The name of a file to export    
 ```
 Currently, all documented inputs and outputs are required; there is no way to make an optional parameter.
 
 ### I/O Types
 
-Input/Output supports the following types: string, number, and filepath
+Input/Output supports the following types: `string, number, boolean, filepath, and dirpath`
 
 * `inputVar = None                 #input   [string, number, filepath]    Description`
 * `outputVar = None                #output  [string, number, filepath]    Description`
