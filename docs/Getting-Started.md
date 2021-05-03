@@ -30,7 +30,6 @@ string_var = 'foo'                 #input  string    A string input
 num_var = None                     #input  number    A numeric input       
 report_file = '/report.csv'        #output filepath  The name of a file to export    
 ```
-Currently, all documented inputs and outputs are required; there is no way to make an optional parameter.
 
 ### I/O Types
 
