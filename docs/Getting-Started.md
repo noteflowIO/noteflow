@@ -35,8 +35,8 @@ report_file = '/report.csv'        #output filepath  The name of a file to expor
 
 Input/Output supports the following types: `string, number, boolean, filepath, and dirpath`
 
-* `inputVar = None                 #input   [string, number, filepath]    Description`
-* `outputVar = None                #output  [string, number, filepath]    Description`
+* `inputVar = None                 #input   [string, number, boolean, filepath, dirpath]    Description`
+* `outputVar = None                #output  [string, number, boolean, filepath, dirpath]    Description`
 
 ### Installing Packages:
 
