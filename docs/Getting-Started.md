@@ -19,7 +19,7 @@ A notebook’s first code cell is used to document inputs and outputs. You can s
   
 The I/O comment spec has three parts:
 - input/ouput: marks variable as an input or output
-- type: I/O is typed (for the underlying API). Types are: `string, number, boolean, filepath, and dirpath`
+- type: I/O is typed (for the underlying API). Types are: `string, text, number, boolean, and filepath`
 - description: The rest of the comment becomes the prompt/description for the field in the generated App.
   
 For example:
@@ -33,10 +33,10 @@ report_file = '/report.csv'        #output filepath  The name of a file to expor
 
 ### I/O Types
 
-Input/Output supports the following types: `string, number, boolean, filepath, and dirpath`
+Input/Output supports the following types: `string, text, number, boolean, and filepath`
 
-* `inputVar = None                 #input   [string, number, boolean, filepath, dirpath]    Description`
-* `outputVar = None                #output  [string, number, boolean, filepath, dirpath]    Description`
+* `inputVar = None                 #input   [string, text, number, boolean, filepath]    Description`
+* `outputVar = None                #output  [string, text, number, boolean, filepath]    Description`
 
 ### Installing Packages:
 
